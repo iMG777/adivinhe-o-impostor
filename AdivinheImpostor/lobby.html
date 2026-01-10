@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe O Impostor</title>
+    <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+    <div class="principal">
+        <h1>VAMOS CONFIGURAR A PARTIDA?</h1>
+
+        <div class="qtdJogadores">
+            <h3>QUANTOS JOGADORES?</h3>
+            <select id="qtdJogadores">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="tema">
+            <h3>TEMA:</h3>
+            <select id="tema">
+                <option value="SUPER_HEROIS">SUPER HEROIS</option>
+                <option value="ANIMES">ANIMES</option>
+                <option value="JOGOS">JOGOS</option>
+            </select>
+        </div>
+        <div class="botao-container">
+            <a href="partida.html" class="iniciar" onclick="configPartida()">INICIAR</a>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        function configPartida(){
+            let qtdJogadores = document.getElementById('qtdJogadores').value
+            localStorage.setItem('qtdJogadores', qtdJogadores);
+
+            let tema = document.getElementById('tema').value
+            localStorage.setItem('tema', tema);
+        }
+    </script>
+</body>
+</html>
